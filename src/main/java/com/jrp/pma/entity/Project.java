@@ -1,4 +1,4 @@
-package com.jrp.pma.entities;
+package com.jrp.pma.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,6 +1,6 @@
 package com.jrp.pma.controller;
 
-import com.jrp.pma.dao.EmployeeRepo;
+import com.jrp.pma.dao.EmployeeRepository;
 import com.jrp.pma.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class EmployeeController {
 
     @Autowired
-    EmployeeRepo employeeRepo;
+    EmployeeRepository employeeRepository;
 
     @GetMapping("/new")
     public String displayEmployeeForm(Model model) {
@@ -25,7 +25,7 @@ public class EmployeeController {
 
     @PostMapping("/save")
     public String createEmployee(Employee employee, Model model) {
-        employeeRepo.save(employee);
+        employeeRepository.save(employee);
 
         return "redirect:/employees/new";
     }

@@ -4,7 +4,7 @@
 
 <head th:replace="layouts :: header"></head>
 <body>
-<nav th:replace="layouts :: foo"></nav>
+<nav th:replace="layouts :: navbar"></nav>
 <div class="container">
     <form action="/projects/save" method="POST" th:object="${project}">
         <input type="text" placeholder="Project Name" th:field="${project.name}">

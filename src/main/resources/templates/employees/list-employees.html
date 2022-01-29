@@ -5,27 +5,16 @@
 <head th:replace="layouts :: header"></head>
 <body>
 <nav th:replace="layouts :: navbar"></nav>
-<div>
-    <h4>Current Projects</h4>
-    <table>
-        <thead>
-        <tr>
-            <th>Project Name</th>
-            <th>Project Stage</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="project : ${projectList}">
-            <td th:text="${project.name}"/>
-            <td th:text="${project.stage}"/>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<div>
-    <h4>Current Employees</h4>
-    <table>
-        <thead>
+<div class="container">
+    <h3>Employee Directory</h3>
+    <hr>
+
+    <!-- Add New Employee Button -->
+    <a th:href="@{/employees/new}" class="btn btn-primary btn-sm mb-3">
+        Add Employee
+    </a>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
         <tr>
             <th>Employee First Name</th>
             <th>Employee Last Name</th>

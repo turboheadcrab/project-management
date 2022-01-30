@@ -59,4 +59,12 @@ public class Project {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
 }

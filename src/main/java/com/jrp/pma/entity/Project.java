@@ -1,6 +1,7 @@
 package com.jrp.pma.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -74,5 +75,13 @@ public class Project {
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
+    }
+
+    // convenience method
+    public void addEmployee(Employee emp) {
+        if (employees == null) {
+            employees = new ArrayList<>();
+        }
+        employees.add(emp);
     }
 }

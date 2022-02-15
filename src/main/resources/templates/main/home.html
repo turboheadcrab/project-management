@@ -15,14 +15,14 @@
             <table class="table table-bordered table-striped">
                 <thead class="thead-dark">
                 <tr>
-                    <th>Project Name</th>
                     <th>Project Stage</th>
+                    <th>Project Count</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="project : ${projectList}">
-                    <td th:text="${project.name}"/>
-                    <td th:text="${project.stage}"/>
+                <tr th:each="projectStageCount : ${projectListStageCount}">
+                    <td th:text="${projectStageCount.getLabel()}"/>
+                    <td th:text="${projectStageCount.getValue()}"/>
                 </tr>
 
                 </tbody>
@@ -47,14 +47,14 @@
                 <tr>
                     <th>Employee First Name</th>
                     <th>Employee Last Name</th>
-                    <th>Employee Email</th>
+                    <th>Employee Project Count</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="employee : ${employeeList}">
-                    <td th:text="${employee.firstName}"/>
-                    <td th:text="${employee.lastName}"/>
-                    <td th:text="${employee.email}"/>
+                <tr th:each="employeeProjectCount : ${employeeListProjectCount}">
+                    <td th:text="${employeeProjectCount.firstName}"/>
+                    <td th:text="${employeeProjectCount.lastName}"/>
+                    <td th:text="${employeeProjectCount.projectCount}"/>
                 </tr>
 
                 </tbody>
@@ -62,8 +62,6 @@
             </table>
         </div>
     </div>
-
-</div>
 
 </div>
 

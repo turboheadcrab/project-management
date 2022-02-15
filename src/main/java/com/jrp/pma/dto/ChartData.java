@@ -1,7 +1,8 @@
 package com.jrp.pma.dto;
 
-public interface ProjectStage {
+public interface ChartData {
 
     String getLabel();
-    int getValue();
+
+    long getValue();
 }

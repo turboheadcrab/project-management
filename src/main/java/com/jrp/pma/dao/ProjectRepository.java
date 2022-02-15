@@ -1,6 +1,6 @@
 package com.jrp.pma.dao;
 
-import com.jrp.pma.dto.ProjectStage;
+import com.jrp.pma.dto.ChartData;
 import com.jrp.pma.entity.Project;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -15,5 +15,5 @@ public interface ProjectRepository extends CrudRepository<Project, Long> {
     @Query(nativeQuery = true, value = "SELECT stage AS label, COUNT(*) AS value " +
             "FROM project " +
             "GROUP BY stage")
-    List<ProjectStage> projectStages();
+    List<ChartData> getProjectStatus();
 }

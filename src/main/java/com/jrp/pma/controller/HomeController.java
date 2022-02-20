@@ -7,6 +7,7 @@ import com.jrp.pma.dao.ProjectRepository;
 import com.jrp.pma.dto.EmployeeProject;
 import com.jrp.pma.dto.ChartData;
 import com.jrp.pma.entity.Project;
+import com.jrp.pma.springExample.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,9 @@ import java.util.Map;
 
 @Controller
 public class HomeController {
+
+    @Autowired
+    Car car;
 
     @Autowired
     ProjectRepository projectRepository;

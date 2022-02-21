@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.jrp.pma", "com.jrp.utils"})
 public class ProjectManagementApplication {
 
     @Autowired
